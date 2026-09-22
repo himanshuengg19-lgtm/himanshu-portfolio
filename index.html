@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Himanshu Padaliya — CRM Transformation & Business Systems</title>
-<meta name="description" content="Himanshu Padaliya — CRM Transformation, RevOps & Business Systems portfolio.">
+<meta name="description" content="Himanshu Padaliya — CRM Transformation & Functional/Technical Operations professional with 12+ years across CRM, RevOps, and regulated BFSI environments.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%233454d1'/%3E%3Ctext x='50' y='50' font-family='Arial, sans-serif' font-size='42' font-weight='800' fill='white' text-anchor='middle' dominant-baseline='central'%3EHP%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Himanshu Padaliya — CRM Transformation & Business Systems">
-<meta property="og:description" content="CRM transformation and business systems professional — NetSuite implementation, RevOps, Power BI analytics, CRM governance.">
+<meta property="og:description" content="12+ years across CRM transformation, RevOps, NetSuite integration, Power BI analytics, and CRM governance in regulated BFSI environments.">
 <meta property="og:url" content="https://himanshuengg19-lgtm.github.io/himanshu-portfolio/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Himanshu Padaliya — CRM Transformation & Business Systems">
-<meta name="twitter:description" content="CRM transformation and business systems professional — NetSuite implementation, RevOps, Power BI analytics, CRM governance.">
+<meta name="twitter:description" content="12+ years across CRM transformation, RevOps, NetSuite integration, Power BI analytics, and CRM governance in regulated BFSI environments.">
 <style>
   :root{
     --bg:#f6f7f9;
@@ -57,6 +57,7 @@
     -webkit-font-smoothing:antialiased;
   }
   a{ color:inherit; }
+  svg.icon{ width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; vertical-align:-4px; margin-right:6px; }
 
   /* Nav */
   .navbar{
@@ -79,12 +80,12 @@
     color:#fff; display:flex; align-items:center; justify-content:center;
     font-size:0.78rem; font-weight:800;
   }
-  .navlinks{ display:flex; gap:28px; list-style:none; margin:0; padding:0; font-size:0.92rem; font-weight:600; }
+  .navlinks{ display:flex; gap:24px; list-style:none; margin:0; padding:0; font-size:0.92rem; font-weight:600; }
   .navlinks a{ text-decoration:none; color:var(--text-muted); transition:color .15s ease; }
   .navlinks a:hover{ color:var(--accent); }
   .nav-toggle{ display:none; background:none; border:none; color:var(--text); font-size:1.4rem; cursor:pointer; }
 
-  @media (max-width:720px){
+  @media (max-width:760px){
     .navlinks{
       position:fixed; top:58px; left:0; right:0;
       background:var(--bg-elevated);
@@ -93,7 +94,7 @@
       max-height:0; overflow:hidden;
       transition:max-height .25s ease;
     }
-    .navlinks.open{ max-height:320px; }
+    .navlinks.open{ max-height:360px; }
     .navlinks li{ padding:14px 28px; border-top:1px solid var(--border); }
     .nav-toggle{ display:block; }
   }
@@ -102,7 +103,7 @@
   .hero{
     background:var(--hero-grad);
     color:#fff;
-    padding:88px 24px 96px;
+    padding:80px 24px 56px;
     text-align:center;
     position:relative;
     overflow:hidden;
@@ -138,6 +139,7 @@
   .hero-actions{
     display:flex; gap:12px; justify-content:center; flex-wrap:wrap;
     position:relative; z-index:1;
+    margin-bottom:40px;
   }
   .btn{
     display:inline-flex; align-items:center; gap:8px;
@@ -151,6 +153,19 @@
   .btn-ghost{ background:rgba(255,255,255,0.12); color:#fff; border:1px solid rgba(255,255,255,0.5); }
   .btn-ghost:hover{ background:rgba(255,255,255,0.2); }
 
+  .stats-row{
+    display:flex; justify-content:center; flex-wrap:wrap;
+    gap:0; max-width:680px; margin:0 auto;
+    position:relative; z-index:1;
+    border-top:1px solid rgba(255,255,255,0.25);
+    padding-top:28px;
+  }
+  .stat{
+    flex:1 1 140px; padding:0 16px; min-width:140px;
+  }
+  .stat .num{ font-size:1.7rem; font-weight:800; display:block; }
+  .stat .lbl{ font-size:0.78rem; opacity:0.85; text-transform:uppercase; letter-spacing:0.08em; font-weight:600; }
+
   /* Layout */
   .wrap{ max-width:880px; margin:0 auto; padding:0 24px; }
   section{ padding:64px 0; border-bottom:1px solid var(--border); }
@@ -158,16 +173,26 @@
   .eyebrow{
     font-size:0.76rem; letter-spacing:0.14em; text-transform:uppercase;
     color:var(--accent); font-weight:800; margin:0 0 8px;
+    display:flex; align-items:center;
   }
   h2.section-title{ font-size:1.7rem; margin:0 0 28px; font-weight:800; letter-spacing:-0.01em; }
   p.summary{ font-size:1.05rem; color:var(--text-muted); max-width:720px; }
+
+  /* reveal-on-scroll */
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.visible{ opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
 
   /* Skills */
   .skill-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px; }
   .skill-card{
     background:var(--bg-elevated); border:1px solid var(--border); border-radius:14px;
     padding:20px; box-shadow:var(--shadow);
+    transition:transform .2s ease, box-shadow .2s ease;
   }
+  .skill-card:hover{ transform:translateY(-3px); box-shadow:0 4px 8px rgba(20,22,26,0.06), 0 16px 32px rgba(20,22,26,0.09); }
   .skill-label{ font-weight:800; font-size:0.92rem; display:block; margin-bottom:12px; }
   .chips{ display:flex; flex-wrap:wrap; gap:6px; }
   .chip{
@@ -180,11 +205,30 @@
   .contribution{
     background:var(--bg-elevated); border:1px solid var(--border); border-radius:14px;
     padding:20px; box-shadow:var(--shadow);
+    transition:transform .2s ease, box-shadow .2s ease;
   }
+  .contribution:hover{ transform:translateY(-3px); box-shadow:0 4px 8px rgba(20,22,26,0.06), 0 16px 32px rgba(20,22,26,0.09); }
   .contribution .title{
     font-weight:800; color:var(--accent); display:block; margin-bottom:6px; font-size:0.98rem;
   }
   .contribution .desc{ color:var(--text-muted); font-size:0.92rem; }
+
+  /* Projects (distinct treatment) */
+  .project-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:18px; }
+  .project-card{
+    background:var(--bg-elevated); border:1px solid var(--border); border-radius:14px;
+    padding:22px; box-shadow:var(--shadow);
+    border-left:4px solid var(--accent);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .project-card:hover{ transform:translateY(-3px); box-shadow:0 4px 8px rgba(20,22,26,0.06), 0 16px 32px rgba(20,22,26,0.09); }
+  .project-tag{
+    display:inline-block; font-size:0.7rem; font-weight:800; letter-spacing:0.08em;
+    color:var(--accent); background:var(--accent-soft); padding:3px 9px; border-radius:5px;
+    margin-bottom:10px; text-transform:uppercase;
+  }
+  .project-card .title{ font-weight:800; display:block; margin-bottom:6px; font-size:1rem; }
+  .project-card .desc{ color:var(--text-muted); font-size:0.92rem; }
 
   /* Experience timeline */
   .timeline{ position:relative; padding-left:28px; }
@@ -198,8 +242,14 @@
     content:""; position:absolute; left:-28px; top:4px; width:14px; height:14px; border-radius:50%;
     background:var(--hero-grad); border:3px solid var(--bg);
   }
-  .job-title{ font-size:1.12rem; font-weight:800; margin:0 0 4px; }
+  .job-head{ display:flex; flex-wrap:wrap; align-items:baseline; gap:10px; margin-bottom:4px; }
+  .job-title{ font-size:1.12rem; font-weight:800; margin:0; }
   .job-title .role{ color:var(--accent); font-weight:700; }
+  .job-dates{
+    font-size:0.76rem; font-weight:700; color:var(--accent);
+    background:var(--accent-soft); padding:3px 10px; border-radius:20px;
+    white-space:nowrap;
+  }
   .job-desc{ color:var(--text-muted); font-size:0.94rem; margin:0 0 14px; }
   ul.bullets{ margin:0; padding-left:20px; }
   ul.bullets li{ margin-bottom:8px; color:var(--text-muted); font-size:0.94rem; }
@@ -209,11 +259,22 @@
   .roles-chips{ display:flex; flex-wrap:wrap; gap:8px; }
   .roles-chips .chip{ font-size:0.86rem; padding:6px 12px; }
 
-  .cert-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:12px; }
-  .cert-item{
+  /* Certifications & Education */
+  .creds-grid{ display:grid; grid-template-columns:1fr 1fr; gap:32px; }
+  @media (max-width:680px){ .creds-grid{ grid-template-columns:1fr; } }
+  .creds-col h3{ font-size:0.95rem; font-weight:800; margin:0 0 14px; }
+  .cert-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+  .cert-list li{
     background:var(--bg-elevated); border:1px solid var(--border); border-radius:10px;
-    padding:14px 16px; font-size:0.92rem; box-shadow:var(--shadow);
+    padding:12px 14px; font-size:0.9rem; box-shadow:var(--shadow);
   }
+  .edu-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+  .edu-list li{
+    background:var(--bg-elevated); border:1px solid var(--border); border-radius:10px;
+    padding:12px 14px; box-shadow:var(--shadow);
+  }
+  .edu-list .deg{ font-weight:700; font-size:0.92rem; display:block; }
+  .edu-list .meta{ color:var(--text-muted); font-size:0.82rem; }
 
   footer{
     padding:36px 24px; text-align:center;
@@ -222,9 +283,10 @@
   footer a{ color:var(--accent); text-decoration:none; font-weight:600; }
 
   @media (max-width:600px){
-    .hero{ padding:64px 20px 72px; }
+    .hero{ padding:56px 20px 44px; }
     .hero h1{ font-size:2rem; }
     section{ padding:48px 0; }
+    .stat{ flex:1 1 45%; margin-bottom:16px; }
   }
 </style>
 </head>
@@ -239,6 +301,7 @@
   <ul class="navlinks" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#expertise">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="mailto:himanshu.engg19@gmail.com">Contact</a></li>
@@ -250,35 +313,46 @@
   <h1>Himanshu Padaliya</h1>
   <p class="tagline">CRM Transformation &amp; Functional / Technical Operations</p>
   <p class="lede">
-    CRM transformation and business systems professional building scalable CRM/ERP solutions,
-    NetSuite integrations, and executive analytics across regulated BFSI environments.
+    CRM transformation and business systems professional with 12+ years across CRM transformation, RevOps,
+    customer &amp; support operations, functional consulting and analytics in regulated BFSI environments.
   </p>
   <div class="hero-actions">
     <a class="btn btn-solid" href="mailto:himanshu.engg19@gmail.com">Email Me</a>
-    <a class="btn btn-ghost" href="tel:+919821062938">Call: 9821062938</a>
+    <a class="btn btn-ghost" href="tel:+919821062938">Call: +91 9821062938</a>
     <a class="btn btn-ghost" href="https://linkedin.com/in/himanshupadaliya" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="btn btn-ghost" href="Himanshu_Padaliya_06-Sept-26.docx">Download Résumé</a>
+    <a class="btn btn-ghost" href="Himanshu_Padaliya_Resume.docx">Download Résumé</a>
+  </div>
+  <div class="stats-row">
+    <div class="stat"><span class="num">12+</span><span class="lbl">Years Experience</span></div>
+    <div class="stat"><span class="num">4</span><span class="lbl">Organizations</span></div>
+    <div class="stat"><span class="num">6</span><span class="lbl">Transformation Initiatives</span></div>
+    <div class="stat"><span class="num">BFSI</span><span class="lbl">Regulated Environments</span></div>
   </div>
 </header>
 
 <div class="wrap">
 
-  <section id="about">
-    <p class="eyebrow">About</p>
+  <section id="about" class="reveal">
+    <p class="eyebrow">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+      About
+    </p>
     <h2 class="section-title">Professional Summary</h2>
     <p class="summary">
-      CRM transformation and business systems professional with experience spanning CRM functional consulting, RevOps,
-      ERP/NetSuite integration, resource and capacity planning, and executive reporting within regulated BFSI environments.
-      Skilled at translating business requirements into scalable CRM and ERP solutions — including workflow design,
-      system integrations, data migration, governance frameworks, and Power BI dashboards that improve pipeline integrity
-      and decision-making. Hands-on experience delivering a NetSuite implementation, running a Resource Management Group
-      (RMG) function, and building a business operations command center used by leadership for real-time KPI visibility.
-      Effective at bridging business, engineering, and delivery stakeholders to drive end-to-end operational transformation.
+      CRM transformation and business systems professional with 12+ years of experience across CRM transformation,
+      Revenue Operations (RevOps), customer and support operations, functional consulting, technical coordination,
+      process optimization, analytics and regulated BFSI environments. Strong expertise in CRM governance, business
+      analysis, solution design, UAT, release management, stakeholder management, production support and continuous
+      improvement, with a proven ability to bridge business users, functional teams, engineering and delivery
+      stakeholders to drive end-to-end CRM and operational transformation.
     </p>
   </section>
 
-  <section id="expertise">
-    <p class="eyebrow">Capabilities</p>
+  <section id="expertise" class="reveal">
+    <p class="eyebrow">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+      Capabilities
+    </p>
     <h2 class="section-title">Functional &amp; Technical Expertise</h2>
     <div class="skill-grid">
       <div class="skill-card">
@@ -307,13 +381,14 @@
           <span class="chip">Workflow Designing</span>
           <span class="chip">Trigger Configuration</span>
           <span class="chip">Data Migration &amp; Integration</span>
-          <span class="chip">NetSuite / ERP Integration</span>
-          <span class="chip">Business Enforcement Rules</span>
+          <span class="chip">Business Enforcement Rule</span>
           <span class="chip">Data Validation</span>
+          <span class="chip">Integration Coordination</span>
           <span class="chip">API Requirements</span>
           <span class="chip">SQL</span>
           <span class="chip">Reporting &amp; Dashboards</span>
           <span class="chip">Technical Documentation</span>
+          <span class="chip">Defect Analysis</span>
           <span class="chip">Root Cause Analysis</span>
         </div>
       </div>
@@ -326,9 +401,8 @@
           <span class="chip">Change &amp; Release Management</span>
           <span class="chip">Incident &amp; Problem Management</span>
           <span class="chip">Production Support</span>
-          <span class="chip">Resource &amp; Capacity Planning</span>
           <span class="chip">Stakeholder Coordination</span>
-          <span class="chip">API Adaptors</span>
+          <span class="chip">API Adaptor</span>
         </div>
       </div>
 
@@ -362,7 +436,6 @@
         <span class="skill-label">Tools &amp; Platforms</span>
         <div class="chips">
           <span class="chip">BUSINESSNEXT / crmNEXT</span>
-          <span class="chip">NetSuite</span>
           <span class="chip">CRM</span>
           <span class="chip">Azure DevOps</span>
           <span class="chip">Jira</span>
@@ -378,105 +451,160 @@
     </div>
   </section>
 
-  <section id="contributions">
-    <p class="eyebrow">Highlights</p>
-    <h2 class="section-title">Selected Functional &amp; Technical Contributions</h2>
-    <div class="contrib-grid">
-      <div class="contribution">
-        <span class="title">CRM Transformation</span>
-        <span class="desc">Led functional and technical delivery of CRM capabilities covering account management, opportunity management, pipeline visibility, customer lifecycle operations, and business process enablement.</span>
+  <section id="projects" class="reveal">
+    <p class="eyebrow">
+      <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      Initiatives
+    </p>
+    <h2 class="section-title">Key Projects &amp; Transformation Initiatives</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <span class="project-tag">AI / Analytics</span>
+        <span class="title">AI-Powered Enterprise Command Center</span>
+        <span class="desc">Drove an AI-enabled single command center concept that consolidates data from multiple enterprise sources into a unified portal, enabling centralized visibility, faster decision-making and cross-functional operational intelligence.</span>
       </div>
-      <div class="contribution">
-        <span class="title">Business Analysis &amp; Solution Design</span>
-        <span class="desc">Partnered with Sales, Delivery, Customer Success, and business stakeholders to gather requirements, map current/future-state processes, and translate business needs into technical specifications.</span>
+      <div class="project-card">
+        <span class="project-tag">Operations</span>
+        <span class="title">RMG Implementation</span>
+        <span class="desc">Supported RMG implementation through business process analysis, CRM configuration, workflow enablement, validation, UAT and stakeholder coordination.</span>
       </div>
-      <div class="contribution">
-        <span class="title">NetSuite Implementation</span>
-        <span class="desc">Led the technical/integration workstream on a NetSuite implementation, covering data migration, system integrations, configuration, and defect analysis through to go-live readiness.</span>
+      <div class="project-card">
+        <span class="project-tag">Integration</span>
+        <span class="title">NetSuite–CRM Integration</span>
+        <span class="desc">Led functional design and integration coordination between NetSuite and CRM, aligning data flows, field mapping, validation and business processes across CRM and ERP platforms.</span>
       </div>
-      <div class="contribution">
-        <span class="title">CRM Governance &amp; Data Quality</span>
-        <span class="desc">Defined governance practices, validation rules, and data-quality standards that improved pipeline integrity, reporting reliability, and operational consistency.</span>
+      <div class="project-card">
+        <span class="project-tag">Governance</span>
+        <span class="title">GTM Data Governance &amp; CRM Automation</span>
+        <span class="desc">Implemented CRM data governance controls and automation to strengthen data quality, validation, process compliance and reporting reliability across GTM operations.</span>
       </div>
-      <div class="contribution">
-        <span class="title">Resource Management (RMG)</span>
-        <span class="desc">Managed resource and capacity planning for delivery teams through the Resource Management Group, aligning staffing with project pipelines and improving utilization tracking.</span>
+      <div class="project-card">
+        <span class="project-tag">Workflow</span>
+        <span class="title">GTM Workflow Transformation</span>
+        <span class="desc">Designed and enabled end-to-end GTM workflows across Lead-to-Opportunity and Case In-flow processes, improving process standardization, routing and CRM visibility across revenue and service operations.</span>
       </div>
-      <div class="contribution">
-        <span class="title">Business Operations Command Center &amp; Analytics</span>
-        <span class="desc">Designed and maintained Power BI dashboards for a centralized command center, giving leadership real-time visibility into pipeline, revenue, delivery, and service KPIs/SLAs.</span>
-      </div>
-      <div class="contribution">
-        <span class="title">SDG Functional &amp; Technical Operations</span>
-        <span class="desc">Worked across requirement analysis, issue triage, defect validation, configuration coordination, UAT, release readiness, and production support.</span>
-      </div>
-      <div class="contribution">
-        <span class="title">Workflow &amp; Process Automation</span>
-        <span class="desc">Identified automation opportunities and implemented workflow-based solutions using CRM capabilities, n8n, and GenAI-assisted operations to improve operational efficiency.</span>
-      </div>
-      <div class="contribution">
-        <span class="title">Cross-Functional Delivery</span>
-        <span class="desc">Coordinated business, functional, technical, and delivery stakeholders across enhancements, projects, releases, dependencies, risks, and operational governance.</span>
+      <div class="project-card">
+        <span class="project-tag">Service Ops</span>
+        <span class="title">ITSM Workflow &amp; Service Operations</span>
+        <span class="desc">Designed and implemented ITSM workflows for SaaS customers with automated alerting, service monitoring and operational reporting to improve incident visibility, response tracking and customer service governance.</span>
       </div>
     </div>
   </section>
 
-  <section id="experience">
-    <p class="eyebrow">Career</p>
+  <section id="contributions" class="reveal">
+    <p class="eyebrow">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+      Highlights
+    </p>
+    <h2 class="section-title">Selected Functional &amp; Technical Contributions</h2>
+    <div class="contrib-grid">
+      <div class="contribution">
+        <span class="title">CRM Transformation</span>
+        <span class="desc">Led functional and technical delivery of CRM capabilities covering account management, opportunity management, pipeline visibility, customer lifecycle operations and business process enablement.</span>
+      </div>
+      <div class="contribution">
+        <span class="title">Business Analysis &amp; Solution Design</span>
+        <span class="desc">Partnered with Sales, Delivery, Customer Success and business stakeholders to understand requirements, map current and future-state processes, define functional specifications and translate business needs into technical requirements.</span>
+      </div>
+      <div class="contribution">
+        <span class="title">CRM Governance &amp; Data Quality</span>
+        <span class="desc">Defined CRM governance practices, validation rules, process controls and data-quality standards to improve pipeline integrity, reporting reliability and operational consistency.</span>
+      </div>
+      <div class="contribution">
+        <span class="title">Business &amp; Operational Analytics</span>
+        <span class="desc">Designed management reporting and operational workflows covering business performance, delivery visibility, service operations and decision support.</span>
+      </div>
+      <div class="contribution">
+        <span class="title">SDG Functional &amp; Technical Operations</span>
+        <span class="desc">Worked across functional and technical responsibilities including requirement analysis, issue triage, defect validation, configuration coordination, UAT, release readiness, production support and stakeholder communication.</span>
+      </div>
+      <div class="contribution">
+        <span class="title">Workflow &amp; Process Automation</span>
+        <span class="desc">Identified opportunities for process automation and implemented workflow-based solutions using CRM capabilities, n8n and GenAI-assisted operations to improve operational efficiency.</span>
+      </div>
+      <div class="contribution">
+        <span class="title">Executive &amp; Operational Reporting</span>
+        <span class="desc">Developed Power BI reporting and dashboards to provide leadership and functional teams with actionable visibility into business, delivery and service operations.</span>
+      </div>
+      <div class="contribution">
+        <span class="title">Cross-Functional Delivery</span>
+        <span class="desc">Coordinated business, functional, technical and delivery stakeholders across enhancements, projects, releases, dependencies, risks and operational governance.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="reveal">
+    <p class="eyebrow">
+      <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+      Career
+    </p>
     <h2 class="section-title">Professional Experience</h2>
     <div class="timeline">
       <div class="job">
-        <p class="job-title">BUSINESSNEXT (CRMNEXT) — <span class="role">Assistant Manager, RevOps, CRM Operations &amp; Enterprise Automation</span></p>
-        <p class="job-desc">Functional and technical owner within SDG / business systems operations, supporting CRM, GTM, and Revenue Operations across regulated BFSI environments. Led delivery on a NetSuite implementation, resource management (RMG), and a business operations command center, alongside core CRM configuration, workflow design, and technical issue analysis (EDS, Mashup Control, XSLT, migration, trigger configuration, data validation).</p>
+        <div class="job-head">
+          <p class="job-title">BUSINESSNEXT (CRMNEXT) — <span class="role">Team Lead → Assistant Manager, RevOps, CRM Operations &amp; Enterprise Automation</span></p>
+          <span class="job-dates">Jun 2022 – Present</span>
+        </div>
+        <p class="job-desc">Functional and technical owner within SDG / business systems operations, supporting CRM, GTM and Revenue Operations across regulated BFSI environments. Designed and configured API Adaptors supporting request/response handling, data mapping, authentication, integration validation and error handling. Technical responsibilities include EDS, Mashup Control, XSLT, migration activities, workflow designing, trigger configuration, CRM customization, data validation and technical issue analysis.</p>
         <ul class="bullets">
-          <li><b>Functional Ownership</b> — Own requirements, business process analysis, functional specifications, user stories, acceptance criteria, UAT, and business sign-off for CRM and RevOps capabilities.</li>
-          <li><b>Technical Coordination</b> — Translate functional requirements into technical specifications; coordinate with engineering on configuration, workflows, integrations, defects, releases, and production issues.</li>
-          <li><b>NetSuite Implementation</b> — Led the technical/integration workstream for a NetSuite implementation, including data migration, system-to-system integrations, API adaptor configuration, and validation of data mappings, authentication, and error handling.</li>
-          <li><b>CRM &amp; GTM Operations</b> — Support Sales, Delivery, and Customer Success processes through CRM governance, pipeline management, opportunity processes, revenue workflows, and operational reporting.</li>
-          <li><b>Resource Management Group (RMG)</b> — Managed resource and capacity planning for delivery teams, aligning staffing with project pipelines and operational demand, and improving utilization tracking and staffing turnaround.</li>
-          <li><b>Solution Governance</b> — Drive enhancement governance, release readiness, change management, issue triage, and stakeholder communication across functional and technical teams.</li>
-          <li><b>Business Operations Command Center</b> — Designed and maintained Power BI dashboards for a centralized command center, giving leadership real-time visibility into pipeline, revenue, forecast, delivery, and service KPIs/SLAs.</li>
-          <li><b>Process Transformation</b> — Standardize cross-functional business processes and identify opportunities for workflow automation, data-quality controls, and operational improvement.</li>
-          <li><b>Team &amp; Stakeholder Leadership</b> — Lead RevOps and business-analysis activities, mentor team members, and work with business, engineering, and leadership stakeholders to deliver business outcomes.</li>
+          <li><b>Functional Ownership</b> — Own requirements, business process analysis, functional specifications, user stories, acceptance criteria, UAT and business sign-off for CRM and RevOps capabilities.</li>
+          <li><b>Technical Coordination</b> — Translate functional requirements into technical specifications; coordinate with engineering on configuration, workflows, integrations, defects, releases and production issues.</li>
+          <li><b>CRM &amp; GTM Operations</b> — Support Sales, Delivery and Customer Success processes through CRM governance, pipeline management, opportunity processes, revenue workflows and operational reporting.</li>
+          <li><b>Solution Governance</b> — Drive enhancement governance, release readiness, change management, issue triage and stakeholder communication across functional and technical teams.</li>
+          <li><b>Analytics &amp; Reporting</b> — Design and maintain Power BI dashboards supporting pipeline, revenue, forecast, delivery and operational decision-making.</li>
+          <li><b>Process Transformation</b> — Standardize cross-functional business processes and identify opportunities for workflow automation, data-quality controls and operational improvement.</li>
+          <li><b>Team &amp; Stakeholder Leadership</b> — Lead RevOps and business-analysis activities, mentor team members and work with business, engineering and leadership stakeholders to deliver business outcomes.</li>
         </ul>
       </div>
 
       <div class="job">
-        <p class="job-title">CRYSTAL TELEVENTURES PVT LTD — <span class="role">Team Lead, Customer Success &amp; Support Operations</span></p>
-        <p class="job-desc">Customer success, support operations, and functional delivery responsibilities across enterprise clients.</p>
+        <div class="job-head">
+          <p class="job-title">CRYSTAL TELEVENTURES PVT LTD — <span class="role">Team Lead, Customer Success &amp; Support Operations</span></p>
+          <span class="job-dates">Mar 2021 – May 2022</span>
+        </div>
+        <p class="job-desc">Customer success, support operations and functional delivery responsibilities across enterprise clients.</p>
         <ul class="bullets">
-          <li><b>Functional Support</b> — Owned service processes, requirements clarification, issue analysis, escalation governance, and stakeholder communication.</li>
+          <li><b>Functional Support</b> — Owned service processes, requirements clarification, issue analysis, escalation governance and stakeholder communication.</li>
           <li><b>Technical Delivery</b> — Coordinated onboarding and API integration activities between client technical teams and internal engineering, including UAT and go-live readiness.</li>
-          <li><b>Operational Governance</b> — Managed service reviews, support processes, runbooks, operational reporting, and continuous improvement.</li>
+          <li><b>Operational Governance</b> — Managed service reviews, support processes, runbooks, operational reporting and continuous improvement.</li>
           <li><b>Team Leadership</b> — Led support engineers and coordinated resolution of functional and technical issues.</li>
         </ul>
       </div>
 
       <div class="job">
-        <p class="job-title">CHEIL INDIA PVT LTD — <span class="role">IT Engineer, Business Applications &amp; Digital Transformation</span></p>
-        <p class="job-desc">Business applications, functional analysis, technical coordination, and digital process transformation.</p>
+        <div class="job-head">
+          <p class="job-title">CHEIL INDIA PVT LTD — <span class="role">IT Engineer, Business Applications &amp; Digital Transformation</span></p>
+          <span class="job-dates">Jan 2016 – Feb 2021</span>
+        </div>
+        <p class="job-desc">Business applications, functional analysis, technical coordination and digital process transformation.</p>
         <ul class="bullets">
-          <li><b>Business Analysis</b> — Gathered business requirements, analyzed application processes, validated solutions, and coordinated UAT with vendors and internal technical teams.</li>
-          <li><b>Functional &amp; Technical Support</b> — Managed application support, enhancements, issue analysis, and coordination between business users and technical stakeholders.</li>
+          <li><b>Business Analysis</b> — Gathered business requirements, analyzed application processes, validated solutions and coordinated UAT with vendors and internal technical teams.</li>
+          <li><b>Functional &amp; Technical Support</b> — Managed application support, enhancements, issue analysis and coordination between business users and technical stakeholders.</li>
           <li><b>Workflow Transformation</b> — Digitized business approval processes through system workflows and supported adoption across business functions.</li>
           <li><b>Reporting &amp; Analytics</b> — Automated recurring operational reporting and improved management visibility through structured application data and reporting.</li>
         </ul>
       </div>
 
       <div class="job">
-        <p class="job-title">HCL TECHNOLOGIES — <span class="role">ERP Support Engineer</span></p>
-        <p class="job-desc">ERP application support across finance, procurement, inventory, and supply-chain processes.</p>
+        <div class="job-head">
+          <p class="job-title">HCL TECHNOLOGIES — <span class="role">ERP Support Engineer</span></p>
+          <span class="job-dates">Feb 2014 – Dec 2015</span>
+        </div>
+        <p class="job-desc">ERP application support across finance, procurement, inventory and supply-chain processes.</p>
         <ul class="bullets">
-          <li><b>ERP Functional Support</b> — Supported business users across finance, procurement, and inventory processes, resolving application issues and coordinating technical analysis.</li>
-          <li><b>Incident &amp; Problem Management</b> — Performed issue diagnosis, root-cause analysis, resolution coordination, and user enablement.</li>
+          <li><b>ERP Functional Support</b> — Supported business users across finance, procurement and inventory processes, resolving application issues and coordinating technical analysis.</li>
+          <li><b>Incident &amp; Problem Management</b> — Performed issue diagnosis, root-cause analysis, resolution coordination and user enablement.</li>
           <li><b>Business Process Support</b> — Worked with functional users to understand process issues and translate them into actionable application support requirements.</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section id="positioning">
-    <p class="eyebrow">Looking Ahead</p>
+  <section id="positioning" class="reveal">
+    <p class="eyebrow">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2L12 16.4 5.7 21l2.3-7.2-6-4.6h7.6z"/></svg>
+      Looking Ahead
+    </p>
     <h2 class="section-title">Career Positioning</h2>
     <div class="roles-chips">
       <span class="chip">CRM Transformation Manager</span>
@@ -488,16 +616,40 @@
     </div>
   </section>
 
-  <section id="education">
-    <p class="eyebrow">Credentials</p>
+  <section id="education" class="reveal">
+    <p class="eyebrow">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+      Credentials
+    </p>
     <h2 class="section-title">Certifications &amp; Education</h2>
-    <div class="cert-grid">
-      <div class="cert-item">ITIL Foundation</div>
-      <div class="cert-item">Microsoft SQL</div>
-      <div class="cert-item">Introduction to Retrieval Augmented Generation (RAG)</div>
-      <div class="cert-item">Generative AI for Consultants</div>
-      <div class="cert-item">Claude AI Foundations</div>
-      <div class="cert-item">B.Tech — Computer Science Engineering, Uttarakhand Technical University, India</div>
+    <div class="creds-grid">
+      <div class="creds-col">
+        <h3>Certifications</h3>
+        <ul class="cert-list">
+          <li>Claude AI Foundations</li>
+          <li>Generative AI for Consultants</li>
+          <li>Introduction to Retrieval Augmented Generation (RAG)</li>
+          <li>Microsoft SQL</li>
+          <li>ITIL Foundation</li>
+        </ul>
+      </div>
+      <div class="creds-col">
+        <h3>Education</h3>
+        <ul class="edu-list">
+          <li>
+            <span class="deg">B.Tech — Computer Science &amp; Engineering</span>
+            <span class="meta">Uttarakhand Technical University &nbsp;·&nbsp; 2007–2011 &nbsp;·&nbsp; 67%</span>
+          </li>
+          <li>
+            <span class="deg">12th Standard</span>
+            <span class="meta">Uttarakhand Board &nbsp;·&nbsp; 2006 &nbsp;·&nbsp; 77%</span>
+          </li>
+          <li>
+            <span class="deg">10th Standard</span>
+            <span class="meta">Uttarakhand Board &nbsp;·&nbsp; 2004 &nbsp;·&nbsp; 70%</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -506,7 +658,7 @@
 <footer>
   Himanshu Padaliya &nbsp;·&nbsp; Noida, India &nbsp;·&nbsp;
   <a href="mailto:himanshu.engg19@gmail.com">himanshu.engg19@gmail.com</a> &nbsp;·&nbsp;
-  <a href="tel:+919821062938">9821062938</a>
+  <a href="tel:+919821062938">+91 9821062938</a>
 </footer>
 
 <script>
@@ -520,6 +672,20 @@
       document.getElementById('navLinks').classList.remove('open');
     });
   });
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
+  }
 </script>
 
 </body>
